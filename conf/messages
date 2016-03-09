@@ -1,0 +1,18 @@
+﻿# You can specialize this file for each language.
+# For example, for French create a messages.fr file
+#
+views.main.tools.login = Log in to write something
+title=Title
+content=Content
+postedAt=Posted at
+author=Author
+post=Related post
+tags=Tags set
+name=Common name
+email=Email
+password=Password
+fullname=Full name
+isAdmin=User is admin
+secure.username=Your email:
+secure.password=Your password:
+secure.signin=Log in now

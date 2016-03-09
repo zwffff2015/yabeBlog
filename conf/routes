@@ -1,0 +1,41 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                                       Application.index
+
+# Import secure routes
+*       /                                       module:secure
+
+# Show blog details
+GET    /posts/{<[0-9]+>id}                      Application.show
+
+# Show tag
+GET    /posts/{tag}                             Application.listTagged
+
+# Post comment
+POST   /posts/{postId}/comments                 Application.postComment
+
+# Get captcha
+GET    /captcha                                 Application.captcha
+
+WS   /hello           MyWebSocket.hello
+WS   /echo            MyWebSocket.echo
+
+GET    /admin/?                                 Admin.index
+GET    /admin/myPosts/{id}                      Admin.form
+GET    /admin/new                               Admin.form
+POST   /admin/new                               Admin.save
+
+# Import CRUD module
+*      /admin                                   module:crud
+
+# Ignore favicon requests
+GET     /favicon.ico                            404
+
+# Map static resources from the /app/public folder to the /public path
+GET     /public/                                staticDir:public
+
+# Catch all
+*       /{controller}/{action}                  {controller}.{action}
