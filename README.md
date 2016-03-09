@@ -1,0 +1,2 @@
+# yabeBlog
+Play Framework (YabeBlog)
